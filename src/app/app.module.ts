@@ -11,10 +11,20 @@ import {AuthenticationInterceptor} from './shared/service/interceptor/authentica
 import {RefreshInterceptor} from './shared/service/interceptor/refresh.interceptor';
 import {GlobalImportModule} from './shared/global-import.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
+import { AddTourTypeComponent } from './dialog/admin/add-tour-type/add-tour-type.component';
+import { AdminComponent } from './admin/admin.component';
+import { AllToursComponent } from './admin/all-tours/all-tours.component';
+import { UpdateTourTypeComponent } from './dialog/admin/update-tour-type/update-tour-type.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    AddTourTypeComponent,
+    AdminComponent,
+    AllToursComponent,
+    UpdateTourTypeComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +53,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       multi: true
     }
   ],
+  entryComponents: [AddTourTypeComponent, UpdateTourTypeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
