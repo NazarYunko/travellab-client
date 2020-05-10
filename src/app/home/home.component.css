@@ -15,14 +15,13 @@
 }
 
 .main-body::before{
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   content: '';
   display: block;
   height: 100%;
   position: absolute;
   width: 100%;
 }
-
 
 .toolbar {
   z-index: 10000;
@@ -36,14 +35,16 @@
   align-items: center;
   color: #ffffff;
   font-weight: 600;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   content: '';
+  -webkit-box-shadow: 0px 11px 45px 0px rgba(0,0,0,0.41);
+  -moz-box-shadow: 0px 11px 45px 0px rgba(0,0,0,0.41);
+  box-shadow: 0px 11px 45px 0px rgba(0,0,0,0.41);
 }
 
 .footer {
-  height: 20vh;
+  height: 100px;
   width: 100vw;
-  display: flex;
   align-items: center;
   justify-content: center;
 }

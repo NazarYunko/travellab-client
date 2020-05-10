@@ -23,6 +23,11 @@ export class TourTypeService {
       .pipe(map((value: any) => value._embedded.tourTypes), catchError(err => throwError(err)));
   }
 
+  findOneTourType(id: number): Observable<TourType> {
+    return this._httpClient.get<TourType>(`/tourTypes/${id}`)
+      .pipe(catchError(error => throwError(error)))
+  }
+
   deleteTourType(id: number): Observable<any> {
     return this._httpClient.delete<any>(`/tourTypes/${id}`)
       .pipe(catchError(error => throwError(error)));

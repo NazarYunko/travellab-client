@@ -16,6 +16,9 @@ import { AddTourTypeComponent } from './dialog/admin/add-tour-type/add-tour-type
 import { AdminComponent } from './admin/admin.component';
 import { AllToursComponent } from './admin/all-tours/all-tours.component';
 import { UpdateTourTypeComponent } from './dialog/admin/update-tour-type/update-tour-type.component';
+import { MainPageComponent } from './home/main-page/main-page.component';
+import { TourTypesComponent } from './home/tour-types/tour-types.component';
+import { TourTypeComponent } from './home/tour-type/tour-type.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { UpdateTourTypeComponent } from './dialog/admin/update-tour-type/update-
     AddTourTypeComponent,
     AdminComponent,
     AllToursComponent,
-    UpdateTourTypeComponent
+    UpdateTourTypeComponent,
+    MainPageComponent,
+    TourTypesComponent,
+    TourTypeComponent
   ],
   imports: [
     BrowserModule,
