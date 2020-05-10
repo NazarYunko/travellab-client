@@ -1,0 +1,13 @@
+
+.tour-type-image {
+  max-height: 30%;
+  border-radius: 4px;
+}
+
+.tour-card {
+  padding: 10%;
+  color: azure;
+  background-color: rgba(0, 0, 0, 0);
+  max-width: 100vw;
+  border-radius: 4px;
+}

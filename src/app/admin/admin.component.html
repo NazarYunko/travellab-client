@@ -15,6 +15,12 @@
         <mat-list-item>
           <button mat-flat-button color="primary" routerLink="/admin/all-tours">Список турів</button>
         </mat-list-item>
+        <mat-list-item>
+          <button mat-flat-button color="primary" (click)="openAddCountryDialog()">Додати країну</button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-flat-button color="primary" routerLink="/admin/all-countries">Список країн</button>
+        </mat-list-item>
       </mat-list>
     </div>
   </mat-drawer>

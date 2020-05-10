@@ -1,8 +1,8 @@
 <form [formGroup]="formGroup">
   <h2 mat-dialog-title>Оновити тип туру</h2>
-  <div mat-dialog-content>
+  <div mat-dialog-content class="update-tour-type-form">
     <p>
-      <mat-form-field>
+      <mat-form-field class="update-tour-type-input">
         <mat-label>Назва</mat-label>
         <input formControlName="name" matInput>
         <mat-error *ngIf="formGroup?.get('name').invalid">Назву не введено</mat-error>
@@ -10,7 +10,7 @@
       </mat-form-field>
     </p>
     <p>
-      <mat-form-field>
+      <mat-form-field class="update-tour-type-input">
         <mat-label>Опис</mat-label>
         <textarea formControlName="description" matInput></textarea>
         <mat-error *ngIf="formGroup?.get('description').invalid">Опис не введено</mat-error>
@@ -18,7 +18,7 @@
       </mat-form-field>
     </p>
     <p>
-      <mat-form-field>
+      <mat-form-field class="update-tour-type-input">
         <mat-label>Ссилка на зображення</mat-label>
         <input formControlName="imagePath" matInput>
         <mat-error *ngIf="formGroup?.get('imagePath').invalid">Ссилку на зображення не введено</mat-error>

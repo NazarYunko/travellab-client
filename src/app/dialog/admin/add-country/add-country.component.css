@@ -2,10 +2,12 @@
   color: black!important;
 }
 
-.update-tour-type-form {
+.add-country-form {
+  height: 600px;
   width: 600px;
 }
 
-.update-tour-type-input {
+.add-country-input {
   width:100%;
 }
+

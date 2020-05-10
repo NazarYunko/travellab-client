@@ -19,6 +19,9 @@ import { UpdateTourTypeComponent } from './dialog/admin/update-tour-type/update-
 import { MainPageComponent } from './home/main-page/main-page.component';
 import { TourTypesComponent } from './home/tour-types/tour-types.component';
 import { TourTypeComponent } from './home/tour-type/tour-type.component';
+import { AddCountryComponent } from './dialog/admin/add-country/add-country.component';
+import { UpdateCountryComponent } from './dialog/admin/update-country/update-country.component';
+import { AllCountriesComponent } from './admin/all-countries/all-countries.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { TourTypeComponent } from './home/tour-type/tour-type.component';
     UpdateTourTypeComponent,
     MainPageComponent,
     TourTypesComponent,
-    TourTypeComponent
+    TourTypeComponent,
+    AddCountryComponent,
+    UpdateCountryComponent,
+    AllCountriesComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +65,7 @@ import { TourTypeComponent } from './home/tour-type/tour-type.component';
       multi: true
     }
   ],
-  entryComponents: [AddTourTypeComponent, UpdateTourTypeComponent],
+  entryComponents: [AddTourTypeComponent, UpdateTourTypeComponent, AddCountryComponent, UpdateCountryComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
