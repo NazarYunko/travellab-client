@@ -22,6 +22,8 @@ import { TourTypeComponent } from './home/tour-type/tour-type.component';
 import { AddCountryComponent } from './dialog/admin/add-country/add-country.component';
 import { UpdateCountryComponent } from './dialog/admin/update-country/update-country.component';
 import { AllCountriesComponent } from './admin/all-countries/all-countries.component';
+import { CountriesComponent } from './home/countries/countries.component';
+import { CountryComponent } from './home/country/country.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { AllCountriesComponent } from './admin/all-countries/all-countries.compo
     TourTypeComponent,
     AddCountryComponent,
     UpdateCountryComponent,
-    AllCountriesComponent
+    AllCountriesComponent,
+    CountriesComponent,
+    CountryComponent
   ],
   imports: [
     BrowserModule,

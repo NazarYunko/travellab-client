@@ -29,5 +29,4 @@ export class TourTypesComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

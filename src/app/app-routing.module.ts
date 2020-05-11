@@ -7,6 +7,8 @@ import {MainPageComponent} from './home/main-page/main-page.component';
 import {TourTypesComponent} from './home/tour-types/tour-types.component';
 import {TourTypeComponent} from './home/tour-type/tour-type.component';
 import {AllCountriesComponent} from './admin/all-countries/all-countries.component';
+import {CountriesComponent} from './home/countries/countries.component';
+import {CountryComponent} from './home/country/country.component';
 
 const routes: Routes = [
   {
@@ -14,7 +16,9 @@ const routes: Routes = [
       [
         {path: '', component: MainPageComponent},
         {path: 'tour-types', component: TourTypesComponent},
-        {path: 'tour-types/:id', component: TourTypeComponent}
+        {path: 'tour-types/:id', component: TourTypeComponent},
+        {path: 'countries', component: CountriesComponent},
+        {path: 'countries/:id', component: CountryComponent}
       ]
   },
   {
