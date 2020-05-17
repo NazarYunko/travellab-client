@@ -9,6 +9,7 @@ import {TourTypeComponent} from './home/tour-type/tour-type.component';
 import {AllCountriesComponent} from './admin/all-countries/all-countries.component';
 import {CountriesComponent} from './home/countries/countries.component';
 import {CountryComponent} from './home/country/country.component';
+import {AllHotelsComponent} from './admin/all-hotels/all-hotels.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,8 @@ const routes: Routes = [
   {
     path: 'admin', component: AdminComponent, children: [
       {path: 'all-tours', component: AllToursComponent},
-      {path: 'all-countries', component: AllCountriesComponent}
+      {path: 'all-countries', component: AllCountriesComponent},
+      {path: 'all-hotels', component: AllHotelsComponent}
     ]
   },
   {path: 'admin', redirectTo: '/admin/all-tours', pathMatch: 'full'}

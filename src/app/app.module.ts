@@ -24,6 +24,9 @@ import { UpdateCountryComponent } from './dialog/admin/update-country/update-cou
 import { AllCountriesComponent } from './admin/all-countries/all-countries.component';
 import { CountriesComponent } from './home/countries/countries.component';
 import { CountryComponent } from './home/country/country.component';
+import { AddHotelComponent } from './dialog/admin/add-hotel/add-hotel.component';
+import { UpdateHotelComponent } from './dialog/admin/update-hotel/update-hotel.component';
+import { AllHotelsComponent } from './admin/all-hotels/all-hotels.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { CountryComponent } from './home/country/country.component';
     UpdateCountryComponent,
     AllCountriesComponent,
     CountriesComponent,
-    CountryComponent
+    CountryComponent,
+    AddHotelComponent,
+    UpdateHotelComponent,
+    AllHotelsComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +75,13 @@ import { CountryComponent } from './home/country/country.component';
       multi: true
     }
   ],
-  entryComponents: [AddTourTypeComponent, UpdateTourTypeComponent, AddCountryComponent, UpdateCountryComponent],
+  entryComponents: [AddTourTypeComponent,
+    UpdateTourTypeComponent,
+    AddCountryComponent,
+    UpdateCountryComponent,
+    AddHotelComponent,
+    UpdateHotelComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
