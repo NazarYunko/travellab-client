@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
   scrollToContacts() {
-    document.getElementById("contacts").scrollIntoView({behavior: 'smooth'});
+    let contactsId = document.getElementById('contacts');
+    if (contactsId != null) {
+      contactsId.scrollIntoView({behavior: 'smooth'});
+    } else {
+      window.location.href = 'http://localhost:4200/#contacts';
+    }
   }
 }

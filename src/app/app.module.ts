@@ -14,7 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { AddTourTypeComponent } from './dialog/admin/add-tour-type/add-tour-type.component';
 import { AdminComponent } from './admin/admin.component';
-import { AllToursComponent } from './admin/all-tours/all-tours.component';
+import { AllToursComponent } from './admin/all-tour-types/all-tours.component';
 import { UpdateTourTypeComponent } from './dialog/admin/update-tour-type/update-tour-type.component';
 import { MainPageComponent } from './home/main-page/main-page.component';
 import { TourTypesComponent } from './home/tour-types/tour-types.component';
@@ -27,6 +27,9 @@ import { CountryComponent } from './home/country/country.component';
 import { AddHotelComponent } from './dialog/admin/add-hotel/add-hotel.component';
 import { UpdateHotelComponent } from './dialog/admin/update-hotel/update-hotel.component';
 import { AllHotelsComponent } from './admin/all-hotels/all-hotels.component';
+import { AddTourComponent } from './dialog/admin/add-tour/add-tour.component';
+import { UpdateTourComponent } from './dialog/admin/update-tour/update-tour.component';
+import {AllToursDataComponent} from './admin/all-tours-data/all-tours-data.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { AllHotelsComponent } from './admin/all-hotels/all-hotels.component';
     CountryComponent,
     AddHotelComponent,
     UpdateHotelComponent,
-    AllHotelsComponent
+    AllHotelsComponent,
+    AddTourComponent,
+    UpdateTourComponent,
+    AllToursDataComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +86,9 @@ import { AllHotelsComponent } from './admin/all-hotels/all-hotels.component';
     AddCountryComponent,
     UpdateCountryComponent,
     AddHotelComponent,
-    UpdateHotelComponent
+    UpdateHotelComponent,
+    AddTourComponent,
+    UpdateTourComponent
   ],
   bootstrap: [AppComponent]
 })

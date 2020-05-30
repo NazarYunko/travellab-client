@@ -13,7 +13,7 @@
           <button mat-flat-button color="primary" (click)="openAddTourTypeDialog()">Додати тип туру</button>
         </mat-list-item>
         <mat-list-item>
-          <button mat-flat-button color="primary" routerLink="/admin/all-tours">Список турів</button>
+          <button mat-flat-button color="primary" routerLink="/admin/all-tours">Список типів турів</button>
         </mat-list-item>
         <mat-list-item>
           <button mat-flat-button color="primary" (click)="openAddCountryDialog()">Додати країну</button>
@@ -26,6 +26,12 @@
         </mat-list-item>
         <mat-list-item>
           <button mat-flat-button color="primary" routerLink="/admin/all-hotels">Список готелів</button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-flat-button color="primary" (click)="openAddTourDataDialog()">Додати дані туру</button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-flat-button color="primary" routerLink="/admin/all-tours-detailed-data">Список турів</button>
         </mat-list-item>
       </mat-list>
     </div>
