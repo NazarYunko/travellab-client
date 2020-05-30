@@ -15,7 +15,7 @@ import {UpdateTourComponent} from '../../dialog/admin/update-tour/update-tour.co
 })
 export class AllToursDataComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'country', 'hotel', 'tourStartDate', 'tourStopDate', 'update', 'delete'];
+  displayedColumns: string[] = ['id', 'tourType', 'country', 'hotel', 'price', 'tourStartDate', 'tourStopDate', 'update', 'delete'];
 
   tours: Tour[] = [];
 

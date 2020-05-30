@@ -7,6 +7,7 @@ export class Tour {
   tourType: TourType
   country: Country
   hotel: Hotel
+  price: number
   tourStartDate: Date
   tourStopDate: Date
 }

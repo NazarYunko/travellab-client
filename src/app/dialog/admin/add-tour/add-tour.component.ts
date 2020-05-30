@@ -19,6 +19,7 @@ export class AddTourComponent implements OnInit {
 
   tour: Tour;
 
+  tourTypes: TourType[] = [];
   countries: Country[] = [];
   hotels: Hotel[] = [];
 
@@ -29,16 +30,20 @@ export class AddTourComponent implements OnInit {
     private _formBuilder: FormBuilder,
     private _tourService: TourService,
     private _countryService: CountryService,
+    private _tourTypeService: TourTypeService,
     private _hotelService: HotelService,
     @Inject(MAT_DIALOG_DATA) public data: any) {
 
     this.findAllCountries()
+    this.findAllTourTypes()
   }
 
   ngOnInit() {
     this.formGroup = this._formBuilder.group({
+      tourType: [null, Validators.required],
       country: [null, Validators.required],
       hotel: [null, Validators.required],
+      price: [null, Validators.required],
       tourStartDate: [null, Validators.required],
       tourStopDate: [null, Validators.required]
     });
@@ -54,6 +59,18 @@ export class AddTourComponent implements OnInit {
         console.log(next)
         this.onNoClick();
         window.location.reload();
+      },
+      error => {
+        console.error(error)
+      }
+    );
+  }
+
+  findAllTourTypes(): void {
+    this._tourTypeService.findAllTourTypes().subscribe(
+      next => {
+        console.log(next)
+        this.tourTypes = next
       },
       error => {
         console.error(error)

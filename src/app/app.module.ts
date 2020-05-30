@@ -31,6 +31,7 @@ import { AddTourComponent } from './dialog/admin/add-tour/add-tour.component';
 import { UpdateTourComponent } from './dialog/admin/update-tour/update-tour.component';
 import {AllToursDataComponent} from './admin/all-tours-data/all-tours-data.component';
 import { SignInComponent } from './home/sign-in/sign-in.component';
+import { SearchToursComponent } from './home/search-tours/search-tours.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { SignInComponent } from './home/sign-in/sign-in.component';
     AddTourComponent,
     UpdateTourComponent,
     AllToursDataComponent,
-    SignInComponent
+    SignInComponent,
+    SearchToursComponent
   ],
   imports: [
     BrowserModule,

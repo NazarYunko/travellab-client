@@ -7,6 +7,8 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {TourService} from '../../../shared/service/server/tour.service';
 import {CountryService} from '../../../shared/service/server/country.service';
 import {HotelService} from '../../../shared/service/server/hotel.service';
+import {TourTypeService} from '../../../shared/service/server/tour-type.service';
+import {TourType} from '../../../shared/model/TourType';
 
 @Component({
   selector: 'app-update-tour',
@@ -19,6 +21,7 @@ export class UpdateTourComponent implements OnInit {
 
   countries: Country[] = [];
   hotels: Hotel[] = [];
+  tourTypes: TourType[] = [];
 
   formGroup: FormGroup;
 
@@ -27,17 +30,21 @@ export class UpdateTourComponent implements OnInit {
     private _formBuilder: FormBuilder,
     private _tourService: TourService,
     private _countryService: CountryService,
+    private _tourTypeService: TourTypeService,
     private _hotelService: HotelService,
     @Inject(MAT_DIALOG_DATA) public data: Tour) {
 
     this.findAllCountries()
+    this.findAllTourTypes()
   }
 
   ngOnInit() {
     this.formGroup = this._formBuilder.group({
       id: [this.data.id],
       country: [this.data.country, Validators.required],
+      tourType: [this.data.tourType, Validators.required],
       hotel: [this.data.hotel, Validators.required],
+      price: [this.data.price, Validators.required],
       tourStartDate: [this.data.tourStartDate, Validators.required],
       tourStopDate: [this.data.tourStopDate, Validators.required]
     });
@@ -53,6 +60,18 @@ export class UpdateTourComponent implements OnInit {
         console.log(next)
         this.onNoClick();
         window.location.reload();
+      },
+      error => {
+        console.error(error)
+      }
+    );
+  }
+
+  findAllTourTypes(): void {
+    this._tourTypeService.findAllTourTypes().subscribe(
+      next => {
+        console.log(next)
+        this.tourTypes = next
       },
       error => {
         console.error(error)

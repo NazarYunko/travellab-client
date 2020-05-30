@@ -9,6 +9,7 @@
   <a mat-button routerLink="/countries">Країни</a>
   <a mat-button (click)="scrollToContacts()">Контакти</a>
   <a *ngIf="!username" mat-button routerLink="/sign-in">Вхід</a>
+  <a *ngIf="username" mat-button>{{username}}</a>
 </div>
 <div class="main-body">
   <router-outlet></router-outlet>
