@@ -30,6 +30,7 @@ import { AllHotelsComponent } from './admin/all-hotels/all-hotels.component';
 import { AddTourComponent } from './dialog/admin/add-tour/add-tour.component';
 import { UpdateTourComponent } from './dialog/admin/update-tour/update-tour.component';
 import {AllToursDataComponent} from './admin/all-tours-data/all-tours-data.component';
+import { SignInComponent } from './home/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import {AllToursDataComponent} from './admin/all-tours-data/all-tours-data.compo
     AllHotelsComponent,
     AddTourComponent,
     UpdateTourComponent,
-    AllToursDataComponent
+    AllToursDataComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,

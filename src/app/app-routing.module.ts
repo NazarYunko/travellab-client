@@ -11,6 +11,7 @@ import {CountriesComponent} from './home/countries/countries.component';
 import {CountryComponent} from './home/country/country.component';
 import {AllHotelsComponent} from './admin/all-hotels/all-hotels.component';
 import {AllToursDataComponent} from './admin/all-tours-data/all-tours-data.component';
+import {SignInComponent} from './home/sign-in/sign-in.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
         {path: 'tour-types', component: TourTypesComponent},
         {path: 'tour-types/:id', component: TourTypeComponent},
         {path: 'countries', component: CountriesComponent},
-        {path: 'countries/:id', component: CountryComponent}
+        {path: 'countries/:id', component: CountryComponent},
+        {path: 'sign-in', component: SignInComponent}
       ]
   },
   {

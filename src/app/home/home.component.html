@@ -4,12 +4,11 @@
          routerLink="/"/>
   </div>
   <span class="travellab-name" style="cursor: pointer" routerLink="/">Travellab</span>
-  <a style="margin-left: 50vw" mat-button href="https://www.google.com/">Пошук турів</a>
+  <a style="margin-left: 60vw" mat-button routerLink="/search-tours">Пошук турів</a>
   <a mat-button routerLink="/tour-types">Типи турів</a>
   <a mat-button routerLink="/countries">Країни</a>
-  <a mat-button href="https://www.google.com/">Послуги</a>
   <a mat-button (click)="scrollToContacts()">Контакти</a>
-  <a mat-button href="https://www.google.com/">Вхід</a>
+  <a *ngIf="!username" mat-button routerLink="/sign-in">Вхід</a>
 </div>
 <div class="main-body">
   <router-outlet></router-outlet>

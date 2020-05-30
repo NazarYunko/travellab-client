@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {LocalStorageService} from '../shared/service/rx-service/local-storage.service';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,14 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() {
+  username: string;
+
+  constructor(private _localStorage: LocalStorageService) {
+    this.getUsername()
   }
 
-  ngOnInit() {
+  getUsername() {
+    this.username = this._localStorage.getItem('username')
   }
 
   scrollToContacts() {
@@ -20,5 +25,8 @@ export class HomeComponent implements OnInit {
     } else {
       window.location.href = 'http://localhost:4200/#contacts';
     }
+  }
+
+  ngOnInit() {
   }
 }
