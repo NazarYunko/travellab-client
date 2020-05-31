@@ -12,6 +12,7 @@ import {CountryComponent} from './home/country/country.component';
 import {AllHotelsComponent} from './admin/all-hotels/all-hotels.component';
 import {AllToursDataComponent} from './admin/all-tours-data/all-tours-data.component';
 import {SignInComponent} from './home/sign-in/sign-in.component';
+import {SearchToursComponent} from './home/search-tours/search-tours.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
         {path: 'tour-types/:id', component: TourTypeComponent},
         {path: 'countries', component: CountriesComponent},
         {path: 'countries/:id', component: CountryComponent},
-        {path: 'sign-in', component: SignInComponent}
+        {path: 'sign-in', component: SignInComponent},
+        {path: 'search-tours', component: SearchToursComponent}
       ]
   },
   {
