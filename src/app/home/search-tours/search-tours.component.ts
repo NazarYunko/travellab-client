@@ -48,8 +48,6 @@ export class SearchToursComponent implements OnInit {
       this._tourService.findAllByTourTypeIdAndCountryIdAndTourDateRangeAndPriceRange(tourTypeId, countryId, tourStartDate, tourStopDate, minPrice, maxPrice).subscribe(
         next => {
           console.log(next);
-          next.forEach(element => element.tourStartDate = String(element.tourStartDate).replace('T21:00:00.000+0000', ''))
-          next.forEach(element => element.tourStopDate = String(element.tourStopDate).replace('T21:00:00.000+0000', ''))
           this.tours = next;
         },
         error => {
